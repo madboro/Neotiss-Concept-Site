@@ -1,0 +1,240 @@
+/* ===== MARKET CARD ===== */
+.market-card {
+  transition: box-shadow 0.15s cubic-bezier(.22,1,.36,1);
+}
+
+.market-card p {
+  transition: opacity 0.2s ease;
+}
+
+.market-card.group:hover p {
+  opacity: 0;
+}
+
+.market-card.group:hover {
+  box-shadow: none 651px 4px 4px rgba(189,165,165,0.25);
+}
+
+.market-card .market-img {
+  transform: translateY(0);
+  box-shadow: none;
+  transition: transform 0.6s cubic-bezier(.22,1,.36,1), box-shadow 0.6s;
+}
+
+.market-card.group:hover .market-img {
+  transform: translateY(-113px);
+  box-shadow: inset 0 0 18px rgba(189,165,165,0.25);
+}
+
+.market-card .orange-slide {
+  bottom: -180px;
+}
+
+.market-card.group:hover .orange-slide {
+  bottom: 0;
+}
+
+/* ===== LINK HOVER ===== */
+.link {
+  position: relative;
+  display: inline-block;
+  transition: color 151ms cubic-bezier(0.22,1,0.36,1);
+  font-weight: 450;
+  font-size: 24px;
+}
+
+.link .underline {
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  height: 1.5px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 151ms cubic-bezier(0.22,1,0.36,1);
+  background-color: transparent;
+}
+
+.link:hover {
+  color: #ee8216;
+  font-weight: 455;
+}
+
+.link:hover .underline {
+  transform: scaleX(1);
+  background-color: #222;
+}
+
+/* ===== BLINKING INPUT ===== */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.blinking {
+  animation: blink 1.2s infinite;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* ===== BURGER MENU ===== */
+.burger-line {
+  width: 30px;
+  height: 2px;
+  background-color: #ffffff;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.burger.active .line1 {
+  transform: rotate(45deg) translate(5px, 5px);
+  background-color: #222;
+  width: 32px;
+}
+
+.burger.active .line2 {
+  opacity: 0;
+}
+
+.burger.active .line3 {
+  transform: rotate(-45deg) translate(6px, -6px);
+  background-color: #222;
+  width: 32px;
+}
+
+/* ===== HEADER FIXE ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 300;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.orange-bar {
+  width: 100%;
+  max-width: 1440px;
+  height: 60px;
+  background-color: #ee8216;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px;
+  z-index: 250;
+}
+
+/* ===== NAV + SEARCH ===== */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 48px;
+  background-color: #fff;
+  z-index: 300;
+}
+
+/* ===== OVERLAY MENU ===== */
+.overlay {
+  position: fixed;
+  top: 104px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 104px);
+  background-color: #EE8216;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 200;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease-out;
+  overflow-y: auto;
+  padding-bottom: 40px;
+}
+
+.overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay a {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 72pt;
+  font-weight: 700;
+  color: #222;
+  text-decoration: none;
+  transition: transform 0.25s ease-out, opacity 0.25s ease-out;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.overlay.open a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.overlay a:nth-child(1) { transition-delay: 0.05s; margin-top: 60px; }
+.overlay a:nth-child(2) { transition-delay: 0.1s; }
+.overlay a:nth-child(3) { transition-delay: 0.15s; }
+.overlay a:nth-child(4) { transition-delay: 0.2s; }
+.overlay a:nth-child(5) { transition-delay: 0.25s; }
+
+.overlay a:hover {
+  font-weight: 500;
+  color: #555;
+}
+
+/* ===== CONTACT BUTTON ===== */
+.btn {
+  width: 100px;
+  height: 30px;
+  background-color: #222;
+  color: #fff;
+  font-family: 'Helvetica Neue';
+  font-weight: bold;
+  font-size: 14pt;
+  border-radius: 23px;
+  border: 2px solid #222;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #ee8216;
+}
+
+/* ===== MORE MARKETS ===== */
+.more-markets {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.more-markets .indicator {
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: opacity 150ms cubic-bezier(0.2,0.32,0.69,0.22), transform 150ms cubic-bezier(0.2,0.32,0.69,0.22);
+}
+
+.more-markets:hover .indicator {
+  opacity: 1;
+  transform: translateX(2px);
+}
+
+.more-markets span {
+  display: inline-block;
+  transition: color 150ms cubic-bezier(0.2,0.32,0.69,0.22), transform 150ms cubic-bezier(0.2,0.32,0.69,0.22), text-decoration 150ms cubic-bezier(0.2,0.32,0.69,0.22);
+}
+
+.more-markets:hover span {
+  color: #ffffff;
+  transform: translateX(2px);
+  text-decoration: none;
+}
+

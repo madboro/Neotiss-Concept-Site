@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Neotiss HPT</title>
+
+  <!-- Lien vers ton CSS séparé -->
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body class="m-0 bg-gray-50 font-['Helvetica_Neue',system-ui,-apple-system]">
+
+  <header>
+    <!-- NAV BAR -->
+    <div class="nav-container">
+      <div class="flex items-center">
+        <img src="Assets/Neotiss-logo.png" alt="Logo" class="h-20 cursor-pointer margin-left -11px">
+      </div>
+
+      <nav class="flex items-center gap-[24px]">
+        <div class="nav-links flex space-x-6">
+          <a href="#" class="link"><span>Our Products</span><span class="underline"></span></a>
+          <a href="#" class="link"><span>Our Realisations</span><span class="underline"></span></a>
+          <a href="#" class="link"><span>Articles</span><span class="underline"></span></a>
+          <a href="#" class="link"><span>Company</span><span class="underline"></span></a>
+        </div>
+
+        <button id="searchToggle" class="ml-2 p-2 flex items-center justify-center">
+          <svg id="searchIcon" class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8" stroke-width="3"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65" stroke-width="3"></line>
+          </svg>
+        </button>
+      </nav>
+
+      <div id="searchBar" class="hidden absolute top-[28px] left-[calc(255px+51px)] w-[975px] border-b-[1pt] border-[#222] flex items-center z-100">
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Search..."
+          class="text-[#858585] text-[48px] font-medium font-['Helvetica Neue'] w-full bg-transparent blinking placeholder-[#858585]"
+        />
+      </div>
+    </div>
+
+    <!-- ORANGE BAR + CONTACT + BURGER -->
+    <div class="orange-bar">
+      <div id="burger" class="burger p-2 rounded-md">
+        <div class="burger-line line1"></div>
+        <div class="burger-line line2"></div>
+        <div class="burger-line line3"></div>
+      </div>
+
+      <button id="Btn" class="btn">
+        Contact
+      </button>
+    </div>
+  </header>
+
+  <!-- CONTENU -->
+  <div class="w-[1440px] h-[1950px] bg-[#222222] mx-auto flex flex-col items-center pt-[203px]">
+    <!-- Ici tout ton contenu HTML déjà existant -->
+    <!-- ... tes cards, sections, footer ... -->
+  </div>
+
+  <!-- OVERLAY MENU -->
+  <div id="overlay" class="overlay">
+    <a href="#">Technologies</a>
+    <a href="#">Other Markets</a>
+    <a href="#">News</a>
+    <a href="#">Markets</a>
+    <a href="#">Core Values</a>
+  </div>
+
+  <!-- Lien vers ton JS séparé -->
+  <script src="JS/script.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
