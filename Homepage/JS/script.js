@@ -1,4 +1,4 @@
-// ===== SEARCH BAR =====
+
 const searchToggle = document.querySelector('#searchToggle');
 const searchIcon = document.querySelector('#searchIcon');
 const searchBar = document.querySelector('#searchBar');
@@ -38,7 +38,6 @@ searchInput.addEventListener('input', () => {
   }
 });
 
-// ===== BURGER MENU =====
 const burger = document.getElementById('burger');
 const overlay = document.getElementById('overlay');
 const contactBtn = document.getElementById('Btn');
