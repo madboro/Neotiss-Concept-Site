@@ -1,4 +1,4 @@
-/* ===== MARKET CARD ===== */
+
 .market-card {
   transition: box-shadow 0.15s cubic-bezier(.22,1,.36,1);
 }
@@ -34,7 +34,7 @@
   bottom: 0;
 }
 
-/* ===== LINK HOVER ===== */
+
 .link {
   position: relative;
   display: inline-block;
@@ -65,7 +65,7 @@
   background-color: #222;
 }
 
-/* ===== BLINKING INPUT ===== */
+
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.4; }
@@ -79,7 +79,7 @@ input:focus {
   outline: none;
 }
 
-/* ===== BURGER MENU ===== */
+
 .burger-line {
   width: 30px;
   height: 2px;
@@ -104,7 +104,7 @@ input:focus {
   width: 32px;
 }
 
-/* ===== HEADER FIXE ===== */
+
 header {
   position: fixed;
   top: 0;
@@ -129,7 +129,7 @@ header {
   z-index: 250;
 }
 
-/* ===== NAV + SEARCH ===== */
+
 .nav-container {
   display: flex;
   align-items: center;
@@ -139,7 +139,7 @@ header {
   z-index: 300;
 }
 
-/* ===== OVERLAY MENU ===== */
+
 .overlay {
   position: fixed;
   top: 104px;
@@ -190,7 +190,7 @@ header {
   color: #555;
 }
 
-/* ===== CONTACT BUTTON ===== */
+
 .btn {
   width: 100px;
   height: 30px;
@@ -209,7 +209,7 @@ header {
   color: #ee8216;
 }
 
-/* ===== MORE MARKETS ===== */
+
 .more-markets {
   display: flex;
   align-items: center;
